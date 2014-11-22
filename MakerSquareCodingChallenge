@@ -6,11 +6,11 @@ class Bank
     @balance = balance
   end
   def withdraw(account, amount)
-    balance += amount
+    @balance += amount
   end
   
   def deposit(account, amount)
-    balance -= amount
+    @balance -= amount
   end
 end
 
