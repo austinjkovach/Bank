@@ -1,10 +1,22 @@
 class Bank
-  def initialize(name)
+  attr_reader :name
+  attr_accessor :balance
+  def initialize(name, balance)
     @name = name
+    @balance = balance
+  end
+  def withdraw(account, amount)
+    balance += amount
+  end
+  
+  def deposit(account, amount)
+    balance -= amount
   end
 end
 
 class Person
+  attr_reader :name
+  attr_accessor :wallet
   def initialize(name, wallet)
     @name = name
     @wallet = wallet
