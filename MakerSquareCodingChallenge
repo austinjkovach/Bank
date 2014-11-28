@@ -26,6 +26,11 @@ class Bank
 	end
 	
 	def transfer(account, new_bank, amount)
+		account.info["#{self.name}"] -= amount
+		account.info["#{new_bank.name}"] += amount
+		puts "#{account.info[:name]} transferred $#{amount} from the #{self.name} account to the #{new_bank.name} account."
+		puts "#{account.info[:name]}'s #{self.name} balance: $#{account.info["#{self.name}"]}"
+		puts "#{account.info[:name]}'s #{new_bank.name} balance: $#{account.info["#{new_bank.name}"]}"
 	end
 	
 end
