@@ -13,7 +13,7 @@ class Bank
 	
 	def deposit(account, amount)
 		account.info["#{self.name}"] += amount
-		account.info[:wallet] -= amount ### How does this affect account.wallet?
+		account.info[:wallet] -= amount
 		self.vault += amount
 		puts "#{account.info[:name]} deposited $#{amount} to #{self.name}. #{account.info[:name]} has $#{account.info[:wallet]}. #{account.info[:name]}'s account has $#{account.info["#{self.name}"]}"
 	end
